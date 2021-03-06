@@ -84,7 +84,6 @@ export default {
       this.$vuetify.goTo(0);
     },
     onResize() {
-      console.log(document.getElementById("header").offsetHeight);
       this.hheight = 'padding-top: '+document.getElementById("header").offsetHeight + "px;";
     },
   },
