@@ -28,7 +28,7 @@
 
     <v-app-bar app id="header">
       <v-toolbar-title>
-        <span class="mr-2">Journée du design hiver / Winter 2021 Design Day</span>
+        <span class="mr-2">Journée du design hiver 2021 / Winter 2021 Design Day</span>
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-4" v-if="isXs"/>
@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     onResize() {
-      this.isXs = window.innerWidth < 1295;
+      this.isXs = window.innerWidth < 1220;
     },
   },
 
