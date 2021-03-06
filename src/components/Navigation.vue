@@ -69,7 +69,27 @@ export default {
     ],
   }),
   props: {
+    color: String,
     flat: Boolean,
+  },
+  methods: {
+    onResize() {
+      this.isXs = window.innerWidth < 1295;
+    },
+  },
+
+  watch: {
+    isXs(value) {
+      if (!value) {
+        if (this.drawer) {
+          this.drawer = false;
+        }
+      }
+    },
+  },
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
   },
 };
 </script>
