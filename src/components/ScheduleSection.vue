@@ -1,5 +1,5 @@
 <template>
-  <section id="schedule">
+  <section class="pb-8" id="schedule">
     <v-container fluid>
       <v-row align="center" justify="center">
         <v-col cols="10">
@@ -73,7 +73,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <div class="svg-border-waves">
+    <div class="svg-border-waves text-white">
       <v-img src="~@/assets/img/borderWaves.svg"/>
     </div>
   </section>
@@ -108,7 +108,7 @@ export default {
   background-color: #f4f7f5;
 }
 
-.svg-border-waves {
+.svg-border-waves .v-image {
   position: absolute;
   bottom: 0;
   left: 0;

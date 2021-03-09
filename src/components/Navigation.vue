@@ -70,7 +70,6 @@ export default {
   }),
   props: {
     color: String,
-    flat: Boolean,
   },
   methods: {
     onResize() {

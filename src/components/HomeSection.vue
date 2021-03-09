@@ -52,15 +52,6 @@ export default {
 </script>
 
 <style>
-.svg-border-waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3rem;
-  width: 100%;
-  overflow: hidden;
-}
-
 #home {
   z-index: 0;
 }
@@ -74,12 +65,6 @@ export default {
   z-index: -1;
 }
 
-.card {
-  min-height: 300px;
-  padding: 10px;
-  transition: 0.5s ease-out;
-}
-
 .card .v-image {
   margin-bottom: 15px;
   transition: 0.75s;
@@ -89,14 +74,6 @@ export default {
   margin-bottom: 10px;
 }
 
-.zoom-effect {
-  transform: scale(1.1);
-}
-
-.up {
-  transform: translateY(-20px);
-  transition: 0.5s ease-out;
-}
 </style>
 
 <style>
