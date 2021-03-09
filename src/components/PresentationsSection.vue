@@ -104,36 +104,40 @@
 export default {
   name: 'PresentationsSection',
   data: () => ({
-    i: 0,
-    size: 0,
-    categories: [],
-    projects: [],
-    loadingSchedule: true,
-    sheetURL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9YSSnja_bENwPrcqw3lpEI_oZ3BeydmZyLwvfeUEpJB_rkqTm_U2reZHUgVdptFkmssCfzxrNxUX1/pub?output=csv"
+    i: 0, // Index for the projects
+    size: 0, // Total number of categories when the 2 csvs are grouped
+    second_size: 0, // Number of categories in the first csv file
+    categories: [], // Categories Array
+    projects: [], // Projects Array
+    loadingSchedule: true, // OnLoad message for schedule
+    sheetURL: [
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9YSSnja_bENwPrcqw3lpEI_oZ3BeydmZyLwvfeUEpJB_rkqTm_U2reZHUgVdptFkmssCfzxrNxUX1/pub?output=csv",
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9YSSnja_bENwPrcqw3lpEI_oZ3BeydmZyLwvfeUEpJB_rkqTm_U2reZHUgVdptFkmssCfzxrNxUX1/pub?gid=472575453&output=csv"
+    ] // Array with the 2 CSVs
   }),
   props: ['zoom_link'],
   created() {
-    this.$papa.parse(this.sheetURL, {
+    this.$papa.parse(this.sheetURL[0], {
       download: true,
-      step: (results, parser) => {
-        if (this.i === 1) {
-          this.size = (results.data.length + 1) / 5;
-          this.projects = new Array(this.size);
-          this.categories = new Array(this.size);
-          for (let i = 0; i < this.size; i++) {
-            this.projects[i] = new Array();
+      step: (results) => {
+        if (this.i === 1) { // If Categories header
+          this.size = (results.data.length + 1) / 5; // Determine number of categories
+          this.projects = new Array(this.size); // Creating the right size array for the first projects
+          this.categories = new Array(this.size); // Creating the right size array for the first categories
+          for (let i = 0; i < this.size; i++) { // Looping around the categories to create the empty arrays and inserting categories
+            this.projects[i] = [];
             this.categories[i] = results.data.slice(i*5, (i*5) + 3)
           }
-        } else if (this.i >= 4) {
-          let cat = 0;
+        } else if (this.i >= 4) { // If Projects
           let array = [];
+          let cat = 0; // Category Index
           for (let i = 0; i < results.data.length; i++) {
-            if (((i + 1) % 5) === 0) {
+            if (((i + 1) % 5) === 0) { // Empty column (End of category)
               this.projects[cat].push(array);
               array = [];
               cat += 1;
             } else {
-              array.push(results.data[i]);
+              array.push(results.data[i]); // Add to the array
             }
           }
           this.projects[cat].push(array);
@@ -141,7 +145,39 @@ export default {
         this.i++;
       },
       complete: res => {
-        this.loadingSchedule = false;
+        this.i = 0;
+        this.$papa.parse(this.sheetURL[1], {
+          download: true,
+          step: (results) => {
+            if (this.i === 1) { // If Categories header
+              this.second_size = this.size;
+              this.size += Math.ceil((results.data.length + 1) / 6);
+              for (let i = this.second_size; i < this.size; i++) {
+                this.categories.push([]);
+                this.projects.push([]);
+                this.projects[i] = new Array();
+                this.categories[i] = [results.data[(i-this.second_size)*7], "", results.data[(i-this.second_size)*7+1]]
+              }
+            } else if (this.i >= 4) { // If projects
+              let array = [];
+              let cat = this.second_size;
+              for (let i = 0; i < results.data.length; i++) {
+                if (((i + 1) % 7) === 0) {
+                  this.projects[cat].push(array);
+                  array = [];
+                  cat += 1;
+                } else {
+                  array.push(results.data[i]);
+                }
+              }
+              this.projects[cat].push(array);
+            }
+            this.i++;
+          },
+          complete: res => {
+            this.loadingSchedule = false;
+          }
+        })
       }
     })
   }
