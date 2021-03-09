@@ -35,7 +35,10 @@
                           <th>Breakout Room</th>
                           <th>Groupe / Groupe</th>
                           <th>Heure / Time</th>
-                          <th>Répertoire de projet / Project repository</th>
+                          <th v-if="i <= 4" >Répertoire de projet / Project repository</th>
+                          <th v-if="i > 4">Project</th>
+                          <th v-if="i === 5">Project description</th>
+                          <th v-if="i === 5">Project Repository</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -43,7 +46,11 @@
                           <td>{{ project[0] }}</td>
                           <td>{{ project[1] }}</td>
                           <td>{{ project[2] }}</td>
-                          <td><a :href="project[3]">{{ project[3] }}</a></td>
+                          <td v-if="i <= 4" ><a :href="project[3]">{{ project[3] }}</a></td>
+                          <td v-if="i === 5">{{ project[3] }}</td>
+                          <td v-if="i === 5"><a :href="project[5]">{{ project[4] }}</a></td>
+                          <td v-if="i === 5"><a :href="project[4]">{{ project[5] }}</a></td>
+                          <td v-if="i === 6">{{ project[3] }}</td>
                         </tr>
                         </tbody>
                       </v-simple-table>
@@ -131,7 +138,7 @@ export default {
         } else if (this.i >= 4) { // If Projects
           let cat = 0; // Category Index
           for (let i = 0; i < results.data.length; i+=5) {
-            this.projects[cat].push(results.data.slice(i, i+3));
+            this.projects[cat].push(results.data.slice(i, i+4));
             cat += 1;
           }
         }
@@ -148,13 +155,13 @@ export default {
               for (let i = this.second_size; i < this.size; i++) { // Adding to the categories and projects array
                 this.categories.push([]);
                 this.projects.push([]);
-                this.projects[i] = new Array();
+                this.projects[i] = [];
                 this.categories[i] = [results.data[(i-this.second_size)*7], "", results.data[(i-this.second_size)*7+1]]
               }
             } else if (this.i >= 4) { // If projects
               let cat = this.second_size; // Category index starting from previous index
               for (let i = 0; i < results.data.length; i+=7) {
-                this.projects[cat].push(results.data.slice(i, i+4));
+                this.projects[cat].push(results.data.slice(i, i+6));
                 cat += 1;
               }
             }
