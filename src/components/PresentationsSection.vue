@@ -129,18 +129,11 @@ export default {
             this.categories[i] = results.data.slice(i*5, (i*5) + 3)
           }
         } else if (this.i >= 4) { // If Projects
-          let array = [];
           let cat = 0; // Category Index
-          for (let i = 0; i < results.data.length; i++) {
-            if (((i + 1) % 5) === 0) { // Empty column (End of category)
-              this.projects[cat].push(array);
-              array = [];
-              cat += 1;
-            } else {
-              array.push(results.data[i]); // Add to the array
-            }
+          for (let i = 0; i < results.data.length; i+=5) {
+            this.projects[cat].push(results.data.slice(i, i+3));
+            cat += 1;
           }
-          this.projects[cat].push(array);
         }
         this.i++;
       },
@@ -150,27 +143,20 @@ export default {
           download: true,
           step: (results) => {
             if (this.i === 1) { // If Categories header
-              this.second_size = this.size;
-              this.size += Math.ceil((results.data.length + 1) / 6);
-              for (let i = this.second_size; i < this.size; i++) {
+              this.second_size = this.size; // Size of previous categories part
+              this.size += Math.ceil((results.data.length + 1) / 6); // Size of all categories
+              for (let i = this.second_size; i < this.size; i++) { // Adding to the categories and projects array
                 this.categories.push([]);
                 this.projects.push([]);
                 this.projects[i] = new Array();
                 this.categories[i] = [results.data[(i-this.second_size)*7], "", results.data[(i-this.second_size)*7+1]]
               }
             } else if (this.i >= 4) { // If projects
-              let array = [];
-              let cat = this.second_size;
-              for (let i = 0; i < results.data.length; i++) {
-                if (((i + 1) % 7) === 0) {
-                  this.projects[cat].push(array);
-                  array = [];
-                  cat += 1;
-                } else {
-                  array.push(results.data[i]);
-                }
+              let cat = this.second_size; // Category index starting from previous index
+              for (let i = 0; i < results.data.length; i+=7) {
+                this.projects[cat].push(results.data.slice(i, i+4));
+                cat += 1;
               }
-              this.projects[cat].push(array);
             }
             this.i++;
           },
