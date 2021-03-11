@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       cssProps: {
-        backgroundImage: `url(${require('@/assets/img/3dprinter.jpg')})`,
+        backgroundImage: `url(${require('@/assets/img/awardpicture.jpg')})`,
         'background-position': 'center'
       }
     }

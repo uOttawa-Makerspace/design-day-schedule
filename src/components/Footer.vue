@@ -28,17 +28,17 @@ export default {
     icons: [
       {
         text: "mdi-facebook",
-        link: "https://www.facebook.com/uottawa.engineering",
+        link: "https://www.facebook.com/uOCEED/",
         alt: "Facebook Logo"
       },
       {
         text: "mdi-twitter",
-        link: "https://twitter.com/uOttawaGenie",
+        link: "https://twitter.com/uOCEED",
         alt: "Twitter Logo"
       },
       {
         text: "mdi-instagram",
-        link: "https://www.instagram.com/genie_engineering_uottawa/",
+        link: "https://www.instagram.com/uoceed/",
         alt: "Instagram Logo"
       },
     ],

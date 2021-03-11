@@ -16,14 +16,14 @@
                         <thead>
                         <tr>
                           <th>Nom de la categorie / Category Name</th>
-                          <th>Description du projet / Project Description</th>
+                          <th v-if="i <= 4">Description du projet / Project Description</th>
                           <th>Lien Zoom / Zoom Link</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                           <td>{{ category[0] }}</td>
-                          <td><a :href="category[1]">{{ category[1] }}</a></td>
+                          <td v-if="i <= 4"><a :href="category[1]">{{ category[1] }}</a></td>
                           <td><a :href="category[2]">{{ category[2] }}</a></td>
                         </tr>
                         </tbody>
@@ -35,10 +35,10 @@
                           <th>Breakout Room</th>
                           <th>Groupe / Groupe</th>
                           <th>Heure / Time</th>
-                          <th v-if="i <= 4" >Répertoire de projet / Project repository</th>
-                          <th v-if="i > 4">Project</th>
-                          <th v-if="i === 5">Project description</th>
-                          <th v-if="i === 5">Project Repository</th>
+                          <th v-if="i <= 4">Répertoire de projet / Project repository</th>
+                          <th v-if="i > 4">Projet / Project</th>
+                          <th v-if="i === 5">Description du projet / Project description</th>
+                          <th v-if="i === 5">Lien du Projet / Project Repository</th>
                         </tr>
                         </thead>
                         <tbody>

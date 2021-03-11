@@ -34,7 +34,7 @@
                       Heure / Time
                     </th>
                     <th class="text-left">
-                      Événement/ Event
+                      Événement / Event
                     </th>
                   </tr>
                   </thead>
@@ -84,19 +84,19 @@ export default {
     events: [
       {
         time: '11h30-11h45',
-        description: 'Remarques d’ouverture/ Opening remarks',
+        description: 'Remarques d’ouverture / Opening remarks',
       },
       {
         time: '11h50-13h40',
-        description: 'Présentations/ Presentations',
+        description: 'Présentations / Presentations',
       },
       {
         time: '14h15-14h30',
-        description: 'Cérémonie de remise des prix/ Award ceremony',
+        description: 'Cérémonie de remise des prix / Award ceremony',
       },
       {
         time: '14h15-14h30',
-        description: 'Remarques de clôture/ Closing remarks',
+        description: 'Remarques de clôture / Closing remarks',
       },
     ],
   }),
