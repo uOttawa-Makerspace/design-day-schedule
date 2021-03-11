@@ -48,8 +48,8 @@
                           <td>{{ project[2] }}</td>
                           <td v-if="i <= 4" ><a :href="project[3]">{{ project[3] }}</a></td>
                           <td v-if="i === 5">{{ project[3] }}</td>
-                          <td v-if="i === 5"><a :href="project[5]">{{ project[4] }}</a></td>
-                          <td v-if="i === 5"><a :href="project[4]">{{ project[5] }}</a></td>
+                          <td v-if="i === 5"><a :href="project[4]">{{ project[4] }}</a></td>
+                          <td v-if="i === 5"><a :href="project[5]">{{ project[5] }}</a></td>
                           <td v-if="i === 6">{{ project[3] }}</td>
                         </tr>
                         </tbody>
