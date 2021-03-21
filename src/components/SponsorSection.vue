@@ -5,7 +5,8 @@
         <v-col cols="10">
           <v-row justify="center">
             <v-col cols="12" sm="5">
-              <h1 class="font-weight-light display-1">Sponsors</h1>
+              <h1 class="font-weight-light display-1 text-center">Sponsors</h1>
+              <v-img src="~@/assets/img/designday2021-sponsors.png"/>
             </v-col>
           </v-row>
         </v-col>

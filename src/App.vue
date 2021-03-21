@@ -5,7 +5,7 @@
       <home ref="home" :style="hheight" />
       <ScheduleSection :zoom_link="zoom_link" />
       <PresentationsSection :zoom_link="zoom_link" />
-<!--      <SponsorSection />-->
+      <SponsorSection />
     </v-main>
     <v-scale-transition>
       <v-btn aria-label="Retour en haut / Return to top" fab v-show="fab" v-scroll="onScroll" dark fixed bottom right color="secondary" @click="toTop">

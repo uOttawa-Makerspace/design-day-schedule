@@ -91,7 +91,7 @@ export default {
         description: 'Présentations / Presentations',
       },
       {
-        time: '14h15-14h30',
+        time: '14h00-14h15',
         description: 'Cérémonie de remise des prix / Award ceremony',
       },
       {
