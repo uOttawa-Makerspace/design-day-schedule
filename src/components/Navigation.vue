@@ -43,7 +43,7 @@
           <span class="mr-2">Presentations</span>
         </v-btn>
         <v-btn rounded outlined text @click="$vuetify.goTo('#sponsors')">
-          <span class="mr-2">Sponsors</span>
+          <span class="mr-2">Partenaires / Sponsors</span>
         </v-btn>
       </div>
     </v-app-bar>
@@ -65,7 +65,7 @@ export default {
       ["mdi-home-outline", "Accueil / Home", "#home"],
       ["mdi-information-outline", "Horaire / Schedule", "#schedule"],
       ["mdi-information-outline", "Presentations", "#presentations"],
-      ["mdi-email-outline", "Sponsors", "#sponsors"],
+      ["mdi-email-outline", "Partenaires / Sponsors", "#sponsors"],
     ],
   }),
   props: {
