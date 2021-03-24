@@ -15,9 +15,9 @@
                       <v-simple-table>
                         <thead>
                         <tr>
-                          <th class="body-2 black--text">Nom de la categorie / Category Name</th>
-                          <th class="body-2 black--text" v-if="i <= 4">Description du projet / Project Description</th>
-                          <th class="body-2 black--text">Lien Zoom / Zoom Link</th>
+                          <th class="body-2 black--text font-weight-bold">Nom de la categorie / Category Name</th>
+                          <th class="body-2 black--text font-weight-bold" v-if="i <= 4">Description du projet / Project Description</th>
+                          <th class="body-2 black--text font-weight-bold">Lien Zoom / Zoom Link</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -32,13 +32,13 @@
                       <v-simple-table>
                         <thead>
                         <tr>
-                          <th class="body-2 black--text">Breakout Room</th>
-                          <th class="body-2 black--text">Groupe / Groupe</th>
-                          <th class="body-2 black--text">Heure / Time</th>
-                          <th class="body-2 black--text" v-if="i <= 4">Répertoire de projet / Project repository</th>
-                          <th class="body-2 black--text" v-if="i > 4">Projet / Project</th>
-                          <th class="body-2 black--text" v-if="i === 5">Description du projet / Project description</th>
-                          <th class="body-2 black--text" v-if="i === 5">Lien du Projet / Project Repository</th>
+                          <th class="body-2 black--text font-weight-bold">Breakout Room</th>
+                          <th class="body-2 black--text font-weight-bold">Groupe / Groupe</th>
+                          <th class="body-2 black--text font-weight-bold">Heure / Time</th>
+                          <th class="body-2 black--text font-weight-bold" v-if="i <= 4">Répertoire de projet / Project repository</th>
+                          <th class="body-2 black--text font-weight-bold" v-if="i > 4">Projet / Project</th>
+                          <th class="body-2 black--text font-weight-bold" v-if="i === 5">Description du projet / Project description</th>
+                          <th class="body-2 black--text font-weight-bold" v-if="i === 5">Lien du Projet / Project Repository</th>
                         </tr>
                         </thead>
                         <tbody>

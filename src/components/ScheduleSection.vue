@@ -30,10 +30,10 @@
                 <template v-slot:default>
                   <thead>
                   <tr>
-                    <th class="text-left body-2 black--text">
+                    <th class="text-left body-2 black--text font-weight-bold">
                       Heure / Time
                     </th>
-                    <th class="text-left body-2 black--text">
+                    <th class="text-left body-2 black--text font-weight-bold">
                       Événement / Event
                     </th>
                   </tr>
