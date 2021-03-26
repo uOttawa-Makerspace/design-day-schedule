@@ -16,13 +16,13 @@
                     Bienvenue à la journée de design de l'hiver 2021. Ce programme vous permettra de vous orienter
                     durant toutes les présentations. Rejoignez-nous dans l'appel zoom principal pour les remarques
                     d'ouverture à 11h30 avec ce lien zoom: <a
-                      :href="zoom_link">{{ zoom_link }}</a>
+                      target="_blank" :href="zoom_link">{{ zoom_link }}</a>
                   </p>
                   <p class="text-justify">
                     Welcome to the Winter 2021 Design day. This program will allow you to orient yourself during all the
                     presentations. Please join us in the main zoom call for the opening remarks at 11h30 with this zoom
                     link: <a
-                      :href="zoom_link">{{ zoom_link }}</a>
+                      target="_blank" :href="zoom_link">{{ zoom_link }}</a>
                   </p>
                 </v-col>
               </v-row>

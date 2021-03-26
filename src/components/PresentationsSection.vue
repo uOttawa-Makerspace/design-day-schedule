@@ -23,8 +23,8 @@
                         <tbody>
                         <tr>
                           <td>{{ category[0] }}</td>
-                          <td v-if="i <= 4"><a :href="category[1]">{{ category[1] }}</a></td>
-                          <td><a :href="category[2]">{{ category[2] }}</a></td>
+                          <td v-if="i <= 4"><a target="_blank" :href="category[1]">{{ category[1] }}</a></td>
+                          <td><a target="_blank" :href="category[2]">{{ category[2] }}</a></td>
                         </tr>
                         </tbody>
                       </v-simple-table>
@@ -42,14 +42,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr v-for="project in projects[i]">
+                        <tr v-for="project in projects[i]" v-if="project[0] !== '' || project[1] !== '' || project[2] !== '' || project[3] !== ''">
                           <td>{{ project[0] }}</td>
                           <td>{{ project[1] }}</td>
                           <td>{{ project[2] }}</td>
-                          <td v-if="i <= 4" ><a :href="project[3]">{{ project[3] }}</a></td>
+                          <td v-if="i <= 4" ><a target="_blank" :href="project[3]">{{ project[3] }}</a></td>
                           <td v-if="i === 5">{{ project[3] }}</td>
-                          <td v-if="i === 5"><a :href="project[4]">{{ project[4] }}</a></td>
-                          <td v-if="i === 5"><a :href="project[5]">{{ project[5] }}</a></td>
+                          <td v-if="i === 5"><a target="_blank" :href="project[4]">{{ project[4] }}</a></td>
+                          <td v-if="i === 5"><a target="_blank" :href="project[5]">{{ project[5] }}</a></td>
                           <td v-if="i === 6">{{ project[3] }}</td>
                         </tr>
                         </tbody>
@@ -66,7 +66,7 @@
 
               <p class="text-justify">
                 Rejoignez-nous dans l'appel zoom principal pour la cérémonie de remise des prix et les remarques de
-                clôture à 14h avec ce lien : <a :href="zoom_link">{{ zoom_link }}</a>
+                clôture à 14h avec ce lien : <a target="_blank" :href="zoom_link">{{ zoom_link }}</a>
               </p>
               <p class="text-justify">
                 Vous pouvez trouver une liste des gagnants <a
@@ -77,7 +77,7 @@
               <p class="text-justify">
                 Please join us back in the main zoom call for the award ceremony and closing remarks at 14h with this
                 link :
-                <a :href="zoom_link">{{ zoom_link }}</a>
+                <a target="_blank" :href="zoom_link">{{ zoom_link }}</a>
               </p>
 
               <p class="text-justify">
