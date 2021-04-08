@@ -92,11 +92,11 @@ export default {
       },
       {
         time: '14h00-14h15',
-        description: 'Cérémonie de remise des prix / Award ceremony',
+        description: 'Remarques de clôture / Closing remarks',
       },
       {
         time: '14h15-14h30',
-        description: 'Remarques de clôture / Closing remarks',
+        description: 'Cérémonie de remise des prix / Award ceremony',
       },
     ],
   }),
