@@ -5,6 +5,7 @@
       <home ref="home" :style="hheight" />
       <ScheduleSection :zoom_link="zoom_link" />
       <PresentationsSection :zoom_link="zoom_link" />
+      <RecordingsSection />
       <SponsorSection />
     </v-main>
     <v-scale-transition>
@@ -22,6 +23,7 @@ import footer from "./components/Footer";
 import ScheduleSection from "./components/ScheduleSection";
 import home from "./components/HomeSection";
 import schedule from "./components/ScheduleSection";
+import RecordingsSection from './components/RecordingsSection';
 import SponsorSection from "@/components/SponsorSection";
 import PresentationsSection from "@/components/PresentationsSection";
 
@@ -31,6 +33,7 @@ export default {
   components: {
     ScheduleSection,
     PresentationsSection,
+    RecordingsSection,
     SponsorSection,
     navigation,
     schedule,
