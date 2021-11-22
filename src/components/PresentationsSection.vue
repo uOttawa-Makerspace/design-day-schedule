@@ -66,7 +66,7 @@
 
               <p class="text-justify">
                 Rejoignez-nous dans l'appel zoom principal pour la cérémonie de remise des prix et les remarques de
-                clôture à 14h avec ce lien : <a target="_blank" :href="zoom_link">{{ zoom_link }}</a>
+                clôture à 15h avec ce lien : <a target="_blank" :href="zoom_link">{{ zoom_link }}</a>
               </p>
               <p class="text-justify">
                 Vous pouvez trouver une liste des gagnants <a
@@ -75,7 +75,7 @@
               </p>
 
               <p class="text-justify">
-                Please join us back in the main zoom call for the award ceremony and closing remarks at 14h with this
+                Please join us back in the main zoom call for the award ceremony and closing remarks at 15h with this
                 link :
                 <a target="_blank" :href="zoom_link">{{ zoom_link }}</a>
               </p>
@@ -118,8 +118,8 @@ export default {
     projects: [], // Projects Array
     loadingSchedule: true, // OnLoad message for schedule
     sheetURL: [
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9YSSnja_bENwPrcqw3lpEI_oZ3BeydmZyLwvfeUEpJB_rkqTm_U2reZHUgVdptFkmssCfzxrNxUX1/pub?output=csv",
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9YSSnja_bENwPrcqw3lpEI_oZ3BeydmZyLwvfeUEpJB_rkqTm_U2reZHUgVdptFkmssCfzxrNxUX1/pub?gid=472575453&output=csv"
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSi3-oy7YOjfsmKDcAluyiEHY5K7RuB77oQVvd6YALeUcA6yLcWfjCZ-AWIOf5nc1w0zYsHSG3XVRf4/pub?output=csv",
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSi3-oy7YOjfsmKDcAluyiEHY5K7RuB77oQVvd6YALeUcA6yLcWfjCZ-AWIOf5nc1w0zYsHSG3XVRf4/pub?output=csv&gid=472575453"
     ] // Array with the 2 CSVs
   }),
   props: ['zoom_link'],

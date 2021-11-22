@@ -1,5 +1,5 @@
-# Horaire de la journée du design hiver 2021
-# Winter 2021 design day schedule
+# Horaire de la journée du design automne 2021
+# Fall 2021 design day schedule
 
 ## Technologies
 * VueJS

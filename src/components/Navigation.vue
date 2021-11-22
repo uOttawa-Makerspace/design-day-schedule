@@ -4,8 +4,8 @@
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title class="title">Journée du design hiver 2021</v-list-item-title>
-            <v-list-item-title class="title">Winter 2021 Design Day</v-list-item-title>
+            <v-list-item-title class="title">Journée du design automne 2021</v-list-item-title>
+            <v-list-item-title class="title">Fall 2021 Design Day</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -28,7 +28,7 @@
 
     <v-app-bar app id="header">
       <v-toolbar-title>
-        <span class="mr-2">Journée du design hiver 2021 / Winter 2021 Design Day</span>
+        <span class="mr-2">Journée du design automne 2021 / Fall 2021 Design Day</span>
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-4" v-if="isXs"/>

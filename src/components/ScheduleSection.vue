@@ -8,19 +8,19 @@
               <br><br>
               <h1 class="font-weight-light display-2">Horaire / Schedule</h1>
               <h1 class="font-weight-light display-1 mb-3">
-                08/04/2021
+                02/12/2021
               </h1>
               <v-row>
                 <v-col>
                   <p class="text-justify">
-                    Bienvenue à la journée de design de l'hiver 2021. Ce programme vous permettra de vous orienter
+                    Bienvenue à la journée de design de l'automne 2021. Ce programme vous permettra de vous orienter
                     durant toutes les présentations. Rejoignez-nous dans l'appel zoom principal pour les remarques
-                    d'ouverture à 11h30 avec ce lien zoom: <a
+                    d'ouverture à 12h avec ce lien zoom: <a
                       target="_blank" :href="zoom_link">{{ zoom_link }}</a>
                   </p>
                   <p class="text-justify">
-                    Welcome to the Winter 2021 Design day. This program will allow you to orient yourself during all the
-                    presentations. Please join us in the main zoom call for the opening remarks at 11h30 with this zoom
+                    Welcome to the Fall 2021 Design day. This program will allow you to orient yourself during all the
+                    presentations. Please join us in the main zoom call for the opening remarks at 12pm with this zoom
                     link: <a
                       target="_blank" :href="zoom_link">{{ zoom_link }}</a>
                   </p>
@@ -83,19 +83,23 @@ export default {
   data: () => ({
     events: [
       {
-        time: '11h30-11h45',
+        time: '11h40-12h',
+        description: 'Orientation des juges / Judge orientation',
+      },
+      {
+        time: '12h-12h15',
         description: 'Remarques d’ouverture / Opening remarks',
       },
       {
-        time: '11h50-13h40',
+        time: '12h30-14h30',
         description: 'Présentations / Presentations',
       },
       {
-        time: '14h00-14h15',
+        time: '15h00-15h15',
         description: 'Remarques de clôture / Closing remarks',
       },
       {
-        time: '14h15-14h30',
+        time: '15h15-15h30',
         description: 'Cérémonie de remise des prix / Award ceremony',
       },
     ],
