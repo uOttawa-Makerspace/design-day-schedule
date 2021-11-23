@@ -48,7 +48,7 @@
                           <td>{{ project[2] }}</td>
                           <td v-if="i <= 4" ><a target="_blank" :href="project[3]">{{ project[3] }}</a></td>
                           <td v-if="i === 5">{{ project[3] }}</td>
-                          <td v-if="i === 5"><a target="_blank" :href="project[4]">{{ project[4] }}</a></td>
+                          <td v-if="i === 5"><a target="_blank" :href="project[4]">{{project[1].includes("FA") ? "lien" : "link" }}</a></td>
                           <td v-if="i === 5"><a target="_blank" :href="project[5]">{{ project[5] }}</a></td>
                           <td v-if="i === 6">{{ project[3] }}</td>
                         </tr>
