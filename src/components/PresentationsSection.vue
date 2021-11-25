@@ -37,8 +37,8 @@
                           <th class="body-2 black--text font-weight-bold">Heure / Time</th>
                           <th class="body-2 black--text font-weight-bold" v-if="i <= 4">Répertoire de projet / Project repository</th>
                           <th class="body-2 black--text font-weight-bold" v-if="i > 4">Projet / Project</th>
-                          <th class="body-2 black--text font-weight-bold" v-if="i === 5">Description du projet / Project description</th>
-                          <th class="body-2 black--text font-weight-bold" v-if="i === 5">Lien du Projet / Project Repository</th>
+                          <th class="body-2 black--text font-weight-bold" v-if="i === 5 || i === 6">Description du projet / Project description</th>
+                          <th class="body-2 black--text font-weight-bold" v-if="i === 5 || i === 6">Lien du Projet / Project Repository</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -48,9 +48,9 @@
                           <td>{{ project[2] }}</td>
                           <td v-if="i <= 4" ><a target="_blank" :href="project[3]">{{ project[3] }}</a></td>
                           <td v-if="i === 5">{{ project[3] }}</td>
-                          <td v-if="i === 5"><a target="_blank" :href="project[4]">{{project[1].includes("FA") ? "lien" : "link" }}</a></td>
-                          <td v-if="i === 5"><a target="_blank" :href="project[5]">{{ project[5] }}</a></td>
-                          <td v-if="i === 6">{{ project[3] }}</td>
+                          <td v-if="i === 5 || i === 6"><a target="_blank" :href="project[4]">{{project[1].includes("FA") ? "lien" : "link" }}</a></td>
+                          <td v-if="i === 5 || i === 6"><a target="_blank" :href="project[5]">{{ project[5] }}</a></td>
+                          <td v-if="i === 7">{{ project[3] }}</td>
                         </tr>
                         </tbody>
                       </v-simple-table>
@@ -151,7 +151,7 @@ export default {
           step: (results) => {
             if (this.i === 1) { // If Categories header
               this.second_size = this.size; // Size of previous categories part
-              this.size += Math.ceil((results.data.length + 1) / 6); // Size of all categories
+              this.size += Math.ceil((results.data.length) / 6); // Size of all categories
               for (let i = this.second_size; i < this.size; i++) { // Adding to the categories and projects array
                 this.categories.push([]);
                 this.projects.push([]);
