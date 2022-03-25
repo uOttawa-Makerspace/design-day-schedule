@@ -6,8 +6,8 @@
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" xl="8">
               <v-card rounded flat class="pa-5" fill-height>
-                <h1 class="display-2 font-weight-bold mb-4">Journée du design automne 2021</h1>
-                <h1 class="display-2 font-weight-bold mb-4">Fall 2021 Design Day</h1>
+                <h1 class="display-2 font-weight-bold mb-4">Journée du design hiver 2022</h1>
+                <h1 class="display-2 font-weight-bold mb-4">Winter 2022 Design Day</h1>
                 <h3>
                   Ingéniosité et créativité en valeur!
                   La Journée du design saura vous épater par notre innovation et inspiration étudiante!

@@ -37,7 +37,7 @@
                           <th class="body-2 black--text font-weight-bold">Heure / Time</th>
                           <th class="body-2 black--text font-weight-bold" v-if="i <= 4">Répertoire de projet / Project repository</th>
                           <th class="body-2 black--text font-weight-bold" v-if="i > 4">Projet / Project</th>
-                          <th class="body-2 black--text font-weight-bold" v-if="i === 5 || i === 6">Description du projet / Project description</th>
+                          <th class="body-2 black--text font-weight-bold" v-if="i === 5">Description du projet / Project description</th>
                           <th class="body-2 black--text font-weight-bold" v-if="i === 5 || i === 6">Lien du Projet / Project Repository</th>
                         </tr>
                         </thead>
@@ -47,10 +47,9 @@
                           <td>{{ project[1] }}</td>
                           <td>{{ project[2] }}</td>
                           <td v-if="i <= 4" ><a target="_blank" :href="project[3]">{{ project[3] }}</a></td>
-                          <td v-if="i === 5">{{ project[3] }}</td>
+                          <td v-if="i === 5 || i === 6">{{ project[3] }}</td>
                           <td v-if="i === 5 || i === 6"><a target="_blank" :href="project[4]">{{project[1].includes("FA") ? "lien" : "link" }}</a></td>
                           <td v-if="i === 5 || i === 6"><a target="_blank" :href="project[5]">{{ project[5] }}</a></td>
-                          <td v-if="i === 7">{{ project[3] }}</td>
                         </tr>
                         </tbody>
                       </v-simple-table>
@@ -66,7 +65,7 @@
 
               <p class="text-justify">
                 Rejoignez-nous dans l'appel zoom principal pour la cérémonie de remise des prix et les remarques de
-                clôture à 15h avec ce lien : <a target="_blank" :href="zoom_link">{{ zoom_link }}</a>
+                clôture à 12h30 avec ce lien : <a target="_blank" :href="zoom_link">{{ zoom_link }}</a>
               </p>
               <p class="text-justify">
                 Vous pouvez trouver une liste des gagnants <a
@@ -75,7 +74,7 @@
               </p>
 
               <p class="text-justify">
-                Please join us back in the main zoom call for the award ceremony and closing remarks at 15h with this
+                Please join us back in the main zoom call for the award ceremony and closing remarks at 12h30pm with this
                 link :
                 <a target="_blank" :href="zoom_link">{{ zoom_link }}</a>
               </p>
@@ -118,8 +117,8 @@ export default {
     projects: [], // Projects Array
     loadingSchedule: true, // OnLoad message for schedule
     sheetURL: [
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSi3-oy7YOjfsmKDcAluyiEHY5K7RuB77oQVvd6YALeUcA6yLcWfjCZ-AWIOf5nc1w0zYsHSG3XVRf4/pub?output=csv",
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSi3-oy7YOjfsmKDcAluyiEHY5K7RuB77oQVvd6YALeUcA6yLcWfjCZ-AWIOf5nc1w0zYsHSG3XVRf4/pub?output=csv&gid=472575453"
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTVtI2X3d-es2hJsY95fzeNrluIcSw7LlnNcqhu24dIVf3E2VpoqUtjXIT1eK02n-ZYeE32mRdFHjbE/pub?output=csv",
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTVtI2X3d-es2hJsY95fzeNrluIcSw7LlnNcqhu24dIVf3E2VpoqUtjXIT1eK02n-ZYeE32mRdFHjbE/pub?output=csv&gid=472575453"
     ] // Array with the 2 CSVs
   }),
   props: ['zoom_link'],

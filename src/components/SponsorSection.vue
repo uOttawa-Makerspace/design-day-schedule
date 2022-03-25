@@ -2,11 +2,11 @@
   <section class="pb-8" id="sponsors">
     <v-container fluid>
       <v-row align="center" justify="center">
-        <v-col cols="10">
+        <v-col cols="12">
           <v-row justify="center">
             <v-col cols="12" sm="5">
               <h1 class="font-weight-light display-1 text-center">Partenaires / Sponsors</h1>
-              <v-img src="~@/assets/img/designday2021-sponsors.png"/>
+              <v-img src="~@/assets/img/designday2022-sponsors.png"/>
             </v-col>
           </v-row>
         </v-col>
