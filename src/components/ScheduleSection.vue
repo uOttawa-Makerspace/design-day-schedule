@@ -15,12 +15,12 @@
                   <p class="text-justify">
                     Bienvenue à la journée de design de l'hiver 2022. Ce programme vous permettra de vous orienter
                     durant toutes les présentations. Rejoignez-nous dans l'appel zoom principal pour les remarques
-                    d'ouverture à 9h45 avec ce lien zoom: <a
+                    d'ouverture à 9h30 avec ce lien zoom: <a
                       target="_blank" :href="zoom_link">{{ zoom_link }}</a>
                   </p>
                   <p class="text-justify">
                     Welcome to the Winter 2022 Design day. This program will allow you to orient yourself during all the
-                    presentations. Please join us in the main zoom call for the opening remarks at 9:45am with this zoom
+                    presentations. Please join us in the main zoom call for the opening remarks at 9:30am with this zoom
                     link: <a
                       target="_blank" :href="zoom_link">{{ zoom_link }}</a>
                   </p>
