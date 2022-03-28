@@ -42,7 +42,7 @@ export default {
   },
 
   data: () => ({
-    zoom_link: 'TBD',
+    zoom_link: 'https://us02web.zoom.us/j/81717075333?pwd=amppclpBQlRISWZGVy91cWZJMS9BZz09',
     fab: null,
     hheight: 'padding-top: 0px;',
     flat: null,
